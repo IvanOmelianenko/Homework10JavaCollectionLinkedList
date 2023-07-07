@@ -69,7 +69,7 @@ public class CustomLinkedList<Element> {
         }
         size--;
     }
-
+// Without list itterator
     private static class Node<Element> {
         Element item;
         Node<Element> next;
