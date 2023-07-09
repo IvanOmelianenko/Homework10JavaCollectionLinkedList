@@ -11,6 +11,7 @@ public class Main {
         array.add(1);
         array.add(9);
         array.set(0, 1);
+        array.addFirst(3);
         System.out.println(array.getFirst());
         System.out.println(array.getLast());
 

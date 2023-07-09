@@ -1,6 +1,3 @@
-import java.util.LinkedList;
-import java.util.ListIterator;
-
 public class CustomLinkedList<Element> {
 
     private Node<Element> first;
@@ -28,6 +25,18 @@ public class CustomLinkedList<Element> {
 // getFirst
     public Element getFirst() {
         return get(0);
+    }
+
+    // addFirst
+    public void addFirst(Element item) {
+        Node<Element> newNode = new Node<>(item, first, null);
+        if (first != null) {
+            first.prev = newNode;
+        } else {
+            last = newNode;
+        }
+        first = newNode;
+        size++;
     }
 
 //  getLast
@@ -69,7 +78,7 @@ public class CustomLinkedList<Element> {
         }
         size--;
     }
-// Without list itterator
+
     private static class Node<Element> {
         Element item;
         Node<Element> next;
